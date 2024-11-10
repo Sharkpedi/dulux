@@ -1,0 +1,10 @@
+local gamelist = {
+   [17046374415]  = "https://raw.githubusercontent.com/Sharkpedi/dulux/refs/heads/main/dulux.lua"
+}
+local checkgame = gamelist[game.gameId]
+if gamelist[game.gameId] then 
+print (checkgame)
+    loadstring(game:HttpGet(checkgame))()
+else 
+game.Players.LocalPlayer:Kick("Not Game Support")
+end
