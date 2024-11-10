@@ -28,6 +28,8 @@ do
 end
 
 
+getgenv().Redeem = true
+
 local codes = {
     "2MVisits",
     "200kMembers",
@@ -49,6 +51,8 @@ Tabs.Main:AddButton({
                 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("UiCommunication"):FireServer("Codes/RedeemCode", code)
                 wait()
             end
+        else
+            print("Redeem is not enabled.")
         end
     end
 })
