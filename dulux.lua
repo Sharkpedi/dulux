@@ -31,15 +31,15 @@ end
 getgenv().Redeem = true
 
 local codes = {
-    "2MVisits",
-    "200kMembers",
     "50KLikes",
+    "200kMembers",
+    "2MVisits",
     "1MVisits",
     "Release",
-    "MozKing",
-    "SubtoRlxsage",
     "SubtoZillas",
-    "SorryforShutdown"
+    "SubtoRlxsage",
+    "MozKing",
+    "Release"
 }
 
 Tabs.Main:AddButton({
