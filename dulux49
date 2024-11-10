@@ -1,10 +1,12 @@
 local gamelist = {
-   [17046374415] = "https://raw.githubusercontent.com/Sharkpedi/dulux/refs/heads/main/dulux.lua"
+    [16732694052] = 'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/8ad4bd1d5b05e12a6b5fa969c2e720a3.lua"))()',
+    [17046374415] = 'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/673bdf6c84e2dc6be2a3208cfda17b2a.lua"))()'
 }
+
 local checkgame = gamelist[game.PlaceId]
 if checkgame then 
-    print(checkgame)
-    loadstring(game:HttpGet(checkgame))()
+    print("Executing script for supported game.")
+    loadstring(checkgame)()
 else 
     game.Players.LocalPlayer:Kick("Not Game Supported")
 end
