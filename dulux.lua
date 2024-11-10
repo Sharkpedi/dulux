@@ -27,7 +27,6 @@ do
 })
 end
 
-
 getgenv().Redeem = true
 
 local codes = {
@@ -49,7 +48,7 @@ Tabs.Main:AddButton({
         if getgenv().Redeem then
             for _, code in ipairs(codes) do
                 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("UiCommunication"):FireServer("Codes/RedeemCode", code)
-                wait()
+                wait(5)  -- Wait for 2 seconds before redeeming the next code
             end
         else
             print("Redeem is not enabled.")
